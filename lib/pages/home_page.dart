@@ -1,5 +1,6 @@
 import 'package:clone_login_app_blue/color.dart';
 import 'package:clone_login_app_blue/size.dart';
+import 'package:clone_login_app_blue/theme.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,6 +28,34 @@ class HomePage extends StatelessWidget {
                 child: Image.asset(
                   "assets/together.png",
                   height: 300,
+                ),
+              ),
+              SizedBox(height: large_gap),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text("Login"),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(double.infinity, 55),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  textStyle: TextStyle(
+                      fontSize: medium_font, fontWeight: FontWeight.bold),
+                ),
+              ),
+              OutlinedButton(
+                onPressed: () {},
+                child: Text("Register"),
+                style: OutlinedButton.styleFrom(
+                  minimumSize: Size(double.infinity, 55),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(
+                        color: primaryColor,
+                        width: 5,
+                      )),
+                  textStyle: TextStyle(
+                      fontSize: medium_font, fontWeight: FontWeight.bold),
                 ),
               ),
             ],
