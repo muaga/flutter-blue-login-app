@@ -17,7 +17,10 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text("Selamat Datang di Steplife",
-                  style: TextStyle(fontSize: medium_font, color: kDarkGray)),
+                  style: TextStyle(
+                      fontSize: medium_font,
+                      fontWeight: FontWeight.w500,
+                      color: kGray)),
               SizedBox(height: medium_gap),
               Text(
                 "Perlindungan dan ketentraman finansial anda",
@@ -25,7 +28,7 @@ class HomePage extends StatelessWidget {
                     fontSize: xxlarge_font, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: large_gap),
-              alignImage("together.png", 300),
+              AlignImage("together.png", 300),
               SizedBox(height: large_gap),
               ElevatedButton(
                   onPressed: () {
@@ -39,7 +42,7 @@ class HomePage extends StatelessWidget {
                   },
                   child: Text("Register")),
               Spacer(), // 남은 여백을 다 뛰움
-              footer(),
+              Footer(),
             ],
           ),
         ),

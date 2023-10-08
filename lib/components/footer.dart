@@ -1,11 +1,7 @@
 import 'package:clone_login_app_blue/size.dart';
 import 'package:flutter/material.dart';
 
-class footer extends StatelessWidget {
-  const footer({
-    super.key,
-  });
-
+class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
