@@ -1,6 +1,7 @@
 import 'package:clone_login_app_blue/pages/home_page.dart';
 import 'package:clone_login_app_blue/pages/join_page.dart';
 import 'package:clone_login_app_blue/pages/login_page.dart';
+import 'package:clone_login_app_blue/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: "/home",
+      theme: theme(),
+      initialRoute: "/login",
       routes: {
         "/home": (context) => HomePage(),
         "/join": (context) => JoinPage(),

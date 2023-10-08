@@ -1,6 +1,7 @@
 import 'package:clone_login_app_blue/color.dart';
+import 'package:clone_login_app_blue/components/align_image.dart';
+import 'package:clone_login_app_blue/components/footer.dart';
 import 'package:clone_login_app_blue/size.dart';
-import 'package:clone_login_app_blue/theme.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -24,40 +25,21 @@ class HomePage extends StatelessWidget {
                     fontSize: xxlarge_font, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: large_gap),
-              Align(
-                child: Image.asset(
-                  "assets/together.png",
-                  height: 300,
-                ),
-              ),
+              alignImage("together.png", 300),
               SizedBox(height: large_gap),
               ElevatedButton(
-                onPressed: () {},
-                child: Text("Login"),
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(double.infinity, 55),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  textStyle: TextStyle(
-                      fontSize: medium_font, fontWeight: FontWeight.bold),
-                ),
-              ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/login");
+                  },
+                  child: Text("Login")),
+              SizedBox(height: large_gap),
               OutlinedButton(
-                onPressed: () {},
-                child: Text("Register"),
-                style: OutlinedButton.styleFrom(
-                  minimumSize: Size(double.infinity, 55),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(
-                        color: primaryColor,
-                        width: 5,
-                      )),
-                  textStyle: TextStyle(
-                      fontSize: medium_font, fontWeight: FontWeight.bold),
-                ),
-              ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/join");
+                  },
+                  child: Text("Register")),
+              Spacer(), // 남은 여백을 다 뛰움
+              footer(),
             ],
           ),
         ),
