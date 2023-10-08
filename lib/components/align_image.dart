@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class alignImage extends StatelessWidget {
+class AlignImage extends StatelessWidget {
   final String image;
   final double size;
 
-  alignImage(this.image, this.size);
+  AlignImage(this.image, this.size);
 
   @override
   Widget build(BuildContext context) {
