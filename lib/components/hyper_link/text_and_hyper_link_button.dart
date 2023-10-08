@@ -4,10 +4,14 @@ import 'package:flutter/material.dart';
 class TextAndHyperLinkButton extends StatelessWidget {
   final String comment;
   final String hyperLinkText;
+  final String route;
   final Color? color;
 
   TextAndHyperLinkButton(
-      {required this.comment, required this.hyperLinkText, this.color});
+      {required this.comment,
+      required this.hyperLinkText,
+      required this.route,
+      this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +19,11 @@ class TextAndHyperLinkButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("${comment}"),
-        HyperLinkButton(text: "${hyperLinkText}", color: color),
+        HyperLinkButton(
+          hyperLinkText: hyperLinkText,
+          route: route,
+          color: color,
+        ),
       ],
     );
   }
